@@ -21,14 +21,11 @@
     "useDefineForClassFields": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
+    "lib": ["ES2022", "dom"],
     "paths": {
       "@environments": ["environments/*"]
     },
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,18 +1,10 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "node_modules/**/*",
-    "dist/**/*"
-  ],
-  "plugins": [
-    "unused-imports",
-    "import"
-  ],
+  "ignorePatterns": ["node_modules/**/*", "dist/**/*"],
+  "plugins": ["unused-imports", "import"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
         "sourceType": "module",
         "ecmaVersion": 2023,
@@ -60,13 +52,7 @@
         "@typescript-eslint/parameter-properties": [
           "warn",
           {
-            "allow": [
-              "readonly",
-              "protected",
-              "private",
-              "protected readonly",
-              "private readonly"
-            ]
+            "allow": ["readonly", "protected", "private", "protected readonly", "private readonly"]
           }
         ],
         "@typescript-eslint/prefer-enum-initializers": "warn",
@@ -81,10 +67,7 @@
         "no-sequences": "warn",
         "no-unneeded-ternary": "warn",
         "no-useless-computed-key": "warn",
-        "one-var": [
-          "warn",
-          "never"
-        ],
+        "one-var": ["warn", "never"],
         "prefer-object-spread": "warn",
         "@angular-eslint/directive-selector": [
           "error",
@@ -105,9 +88,7 @@
       }
     },
     {
-      "files": [
-        "*.spec.ts"
-      ],
+      "files": ["*.spec.ts"],
       "rules": {
         "@typescript-eslint/unbound-method": "off",
         "@typescript-eslint/no-unsafe-member-access": "off",
@@ -117,13 +98,8 @@
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended",
-        "plugin:@angular-eslint/template/accessibility"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "plugin:@angular-eslint/template/accessibility"],
       "rules": {
         "max-len": [
           "error",
@@ -134,9 +110,7 @@
       }
     },
     {
-      "files": [
-        "./tools/*"
-      ],
+      "files": ["./tools/*"],
       "rules": {
         "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/no-unsafe-assignment": "off",
