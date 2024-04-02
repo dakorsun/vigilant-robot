@@ -1,0 +1,10 @@
+node_modules
+dist
+
+.angular
+.idea/
+.husky
+
+docker-compose*
+angular.json
+pnpm-lock.yaml
