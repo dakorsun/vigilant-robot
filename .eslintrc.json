@@ -1,0 +1,122 @@
+{
+  "root": true,
+  "ignorePatterns": ["node_modules/**/*", "dist/**/*"],
+  "plugins": ["unused-imports", "import"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2023,
+        "project": "./tsconfig.eslint.json"
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@typescript-eslint/strict",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "@typescript-eslint/unbound-method": [
+          "warn",
+          {
+            "ignoreStatic": true
+          }
+        ],
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/lines-between-class-members": "off",
+        "@typescript-eslint/no-require-imports": "warn",
+        "@typescript-eslint/prefer-readonly": "warn",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-useless-constructor": "off",
+        "@typescript-eslint/no-unsafe-argument": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-enum-comparison": "off",
+        "@typescript-eslint/no-unnecessary-condition": "off",
+        "@typescript-eslint/no-extraneous-class": [
+          "off",
+          {
+            "allowEmpty": true
+          }
+        ],
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/no-shadow": "warn",
+        "@typescript-eslint/no-redundant-type-constituents": "off",
+        "@typescript-eslint/parameter-properties": [
+          "warn",
+          {
+            "allow": ["readonly", "protected", "private", "protected readonly", "private readonly"]
+          }
+        ],
+        "@typescript-eslint/prefer-enum-initializers": "warn",
+        "no-duplicate-imports": "error",
+        "no-extra-bind": "warn",
+        "no-else-return": "warn",
+        "no-lonely-if": "warn",
+        "no-negated-condition": "warn",
+        "no-new-object": "warn",
+        "import/no-extraneous-dependencies": "off",
+        "no-new-wrappers": "warn",
+        "no-sequences": "warn",
+        "no-unneeded-ternary": "warn",
+        "no-useless-computed-key": "warn",
+        "one-var": ["warn", "never"],
+        "prefer-object-spread": "warn",
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.spec.ts"],
+      "rules": {
+        "@typescript-eslint/unbound-method": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "no-console": "off"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "plugin:@angular-eslint/template/accessibility"],
+      "rules": {
+        "max-len": [
+          "error",
+          {
+            "code": 140
+          }
+        ]
+      }
+    },
+    {
+      "files": ["./tools/*"],
+      "rules": {
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "no-console": "off"
+      }
+    }
+  ]
+}
